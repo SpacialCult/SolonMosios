@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const skillGroups = {
   "Languages": ["HTML5", "CSS3", "JavaScript", "C", "C++", "C#", "Java", "Ruby", "PHP"],
-  "Frameworks & Tools": ["React", "Next.js", "Wordpress CMS", "Oracle MySQL", "Unity", "Unreal Engine 5", "RPG Maker MV"],
+  "Frameworks & Tools": ["React", "Next.js", "Node.js", "Wordpress CMS", "Oracle MySQL", "Unity", "Unreal Engine 5", "RPG Maker MV"],
   "Other": ["Video Editing"]
 };
 
@@ -15,6 +15,7 @@ const hobbies = [
 ];
 
 export default function About() {
+  document.title = "About | Solon Mosios";
   return (
     <div className="min-h-screen bg-gray-900 text-gray-200 px-6 py-12">
       <motion.div

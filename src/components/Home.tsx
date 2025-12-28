@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 
-export default function Home() {
+export default function Home({ setPage }: { setPage: (page: string) => void }) {
+  document.title = "Home | Solon Mosios";
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white flex flex-col items-center justify-center text-center px-6">
-      {}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -16,15 +16,15 @@ export default function Home() {
           A passionate developer who loves building web apps, crafting stories through games,
           and exploring the art of clean, expressive code.
         </p>
-        <a
-          href="/projects"
+
+        <button
+          onClick={() => setPage("Projects")}
           className="mt-8 inline-block px-6 py-3 bg-blue-500 hover:bg-blue-600 rounded-full text-white font-semibold transition"
         >
           View My Work
-        </a>
+        </button>
       </motion.div>
 
-      {}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

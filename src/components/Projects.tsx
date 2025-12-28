@@ -15,46 +15,46 @@ const projects: Project[] = [
   {
     title: "Personal Website",
     category: "Web",
-    image: "/images/wb.png",
+    image: `${import.meta.env.BASE_URL}images/wb.png`,
     description: "A responsive personal portfolio built with React and Tailwind CSS.\n You're viewing this right now!",
-    link: "https://mosweb.gr/SolonMosios",
+    link: "https://spacialcult.github.io/SolonMosios/",
   },
   {
     title: "Rifts: A World Apart",
     category: "Games",
-    image: "/images/Newrifts.png",
+    image: `${import.meta.env.BASE_URL}images/Newrifts.png`,
     description: "A 2D turn-based RPG made in RPG Maker MV.",
     link: "https://hakairyu.itch.io/rifts-a-world-apart",
   },
   {
     title: "Mastro Adventures",
     category: "Games",
-    image: "/images/mastroadventures.png",
+    image: `${import.meta.env.BASE_URL}images/mastroadventures.png`,
     description: "A 2D turn-based RPG made with Unity and C#.",
     link: "https://hakairyu.itch.io/mastro-adventures"
   },
   {
     title: "Rock Paper Scissors (C)",
     category: "Other",
-    image: "/images/rockgame.png",
+    image: `${import.meta.env.BASE_URL}images/rockgame.png`,
     description: "A simple command-line rock-paper-scissors game written in C.",
   },
   {
     title: "RPG Enemy Guide (C++)",
     category: "Other",
-    image: "/images/enemyindex.png",
+    image: `${import.meta.env.BASE_URL}images/enemyindex.png`,
     description: "A terminal-based guide tool for enemy data in an RPG project.",
   },
   {
     title: "Authenticator (Ruby)",
     category: "Other",
-    image: "/images/ruby.png",
+    image: `${import.meta.env.BASE_URL}images/ruby.png`,
     description: "A simple terminal-based app that validates user credentials and displays stored profile information.",
   },
   {
     title: "FitTracker",
     category: "Web",
-    image: "/images/fitrack.png",
+    image: `${import.meta.env.BASE_URL}images/fitrack.png`,
     description: "A small interactive app built with React and modern hooks.",
     link: "https://moswebgr.github.io/FitTracker/",
     coDev: "https://mosweb.gr/VasilisMoskofidis",
@@ -62,22 +62,28 @@ const projects: Project[] = [
   {
     title: "Calendar",
     category: "Web",
-    image: "/images/calendar.png",
+    image: `${import.meta.env.BASE_URL}images/calendar.png`,
     description: "A Calendar web application built with JavaScript during my internship.",
     link: "https://calendar.mosweb.gr/",
     coDev: "https://mosweb.gr/VasilisMoskofidis",
   },
+  {
+    title: "OrderUp",
+    category: "Web",
+    image: `${import.meta.env.BASE_URL}images/IASON.png`,
+    description: "A web application that can be used to track orders, using React for the frontend and node.js+JSON files for the backend.",
+  },
     {
     title: "GRD BOX",
     category: "Wordpress",
-    image: "/images/box.png",
+    image: `${import.meta.env.BASE_URL}images/box.png`,
     description: "GRDiscovery's subscription service which provides access to the company's tv productions.",
     link: "https://box.grdiscovery.com/",
   },
     {
     title: "kofsanidis.pro",
     category: "Wordpress",
-    image: "/images/kofsanidi.jpg",
+    image: `${import.meta.env.BASE_URL}images/kofsanidi.jpg`,
     description: "A website designed to showcase the client's work regarding tv productions. \b The website has been currently taken down by the owner.",
     notes: "Website taken down by owner",
   },
@@ -86,6 +92,7 @@ const projects: Project[] = [
 const categories = ["All", "Web", "Games", "Other", "Wordpress"] as const;
 
 export default function Projects() {
+  document.title = "Projects | Solon Mosios";
   const [filter, setFilter] = useState<"All" | "Web" | "Games" | "Other" |"Wordpress">("All");
 
   const filteredProjects =
